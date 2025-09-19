@@ -16,4 +16,8 @@ class HomeController extends Controller
         ];
         return view('index', compact('title', 'students'));
     }
+
+    public function About(){
+        return view('about');
+    }
 }

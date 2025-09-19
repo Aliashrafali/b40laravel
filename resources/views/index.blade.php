@@ -11,39 +11,19 @@
 </head>
 <body>
     <section>
-        <div class="container mt-5">
+        <div class="container-fluid">
             <div class="row">
-                <div class="col-12">
-                    <div class="card">
-                        <table class="table table-bordered w-100">
-                            <thead>
-                                <tr>
-                                    <th>Sno</th>
-                                    <th>Name</th>
-                                    <th>Age</th>
-                                    <th>Course</th>
-                                    <th>Session</th>
-                                    <th>Status</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @php
-                                    $i = 1;
-                                @endphp
-                                @foreach ($students as $data)
-                                    <tr>
-                                        <td>{{$i++}}</td>
-                                        <td>{{$data['name']}}</td>
-                                        <td>{{$data['age']}}</td>
-                                        <td>{{$data['course']}}</td>
-                                        <td>{{$data['session']}}</td>
-                                        <td>
-                                            {!! $data['status'] == 0 ? '<span class="badge rounded-pill text-bg-success">Active</span>' : '<span class="badge rounded-pill text-bg-warning">De-active</span>' !!}
-                                        </td>
-                                    </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
+                <div class="col-12 p-0 m-0">
+                    <div class="navbar">
+                        <nav>
+                            <ul>
+                                <li><a href="/">Home</a></li>
+                                <li><a href="{{route('About')}}">About Us</a></li>
+                                <li><a href="">Gallery</a></li>
+                                <li><a href="">Rules & Regulations</a></li>
+                                <li><a href="">Contact Us</a></li>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
             </div>

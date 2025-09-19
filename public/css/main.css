@@ -3,3 +3,16 @@ body{
     padding: 0px;
     background-color: #EEE;
 }
+.navbar{
+    height: 60px;
+    background-color: red;
+    padding-top: 15px;
+}
+.navbar nav ul li{
+    display: inline-block;
+}
+.navbar nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    margin-left: 15px;
+}
