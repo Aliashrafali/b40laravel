@@ -20,4 +20,9 @@ class HomeController extends Controller
     public function About(){
         return view('about');
     }
+
+    public function Create(){
+        $title = 'Create';
+        return view('create', compact('title'));
+    }
 }
