@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Student;
 
 class HomeController extends Controller
 {
@@ -25,4 +26,17 @@ class HomeController extends Controller
         $title = 'Create';
         return view('create', compact('title'));
     }
+
+    public function Student(Request $req){
+        $student = new Student();
+        $student->name = $req->name;
+        $student->mobile = $req->mobile;
+        $student->email = $req->email;
+        $student->fname = $req->fname;
+        $student->class = $req->class;
+        $student->save();
+        return redirect('create')->with('message', "Data Inserted");
+    }
+
+
 }
