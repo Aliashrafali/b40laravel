@@ -34,9 +34,22 @@ class HomeController extends Controller
         $student->email = $req->email;
         $student->fname = $req->fname;
         $student->class = $req->class;
+        $student->status = 0;
         $student->save();
         return redirect('create')->with('message', "Data Inserted");
     }
 
+    public function View(){
+        $students = Student::all(); // get all data from the database
+        $title = 'View Page';
+        return view('view',compact('title', 'students'));
+    }
 
+    public function deleteData($id){
+        $data = Student::find($id);
+        $students = Student::all();
+        $title = 'View Page';
+        $data->delete();
+        return view('view', compact('students', 'title'));
+    }
 }

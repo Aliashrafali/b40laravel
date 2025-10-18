@@ -10,7 +10,7 @@
                                 <li><a href="">Gallery</a></li>
                                 <li><a href="">Rules & Regulations</a></li>
                                 <li><a href="{{route('create')}}">Create</a></li>
-                                <li><a href="">View</a></li>
+                                <li><a href="{{route('view')}}">View</a></li>
                                 <li><a href="">Contact Us</a></li>
                             </ul>
                         </nav>
