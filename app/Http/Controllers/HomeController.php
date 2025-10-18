@@ -45,6 +45,12 @@ class HomeController extends Controller
         return view('view',compact('title', 'students'));
     }
 
+    public function Edit($id){
+        $studentdata = Student::find($id);
+        $title = 'Edit Page';
+        return view('edit', compact('studentdata', 'title'));
+    }
+
     public function deleteData($id){
         $data = Student::find($id);
         $students = Student::all();

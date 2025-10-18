@@ -9,3 +9,4 @@ Route::get('/create', [HomeController::class, 'Create'])->name('create');
 Route::post('/addstudent', [HomeController::class, 'Student'])->name('addstudent');
 Route::get('/view', [HomeController::class, 'View'])->name('view');
 Route::get('/delete/{id}', [HomeController::class, 'deleteData'])->name('delete');
+Route::get('/edit/{id}', [HomeController::class, 'Edit'])->name('edit');

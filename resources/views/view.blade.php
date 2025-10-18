@@ -40,7 +40,7 @@
                                             @endif
                                         </td>
                                         <td>
-                                            <a href="" style="text-decoration: none;" class="badge rounded-pill text-bg-primary">Edit</a>
+                                            <a href={{ 'edit/'.$student->id }} style="text-decoration: none;" class="badge rounded-pill text-bg-primary">Edit</a>
                                             <a href={{ 'delete/'.$student->id }} style="text-decoration: none;" class="badge rounded-pill text-bg-danger">Delete</a>
                                         </td>
                                     </tr>
